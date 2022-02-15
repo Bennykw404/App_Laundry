@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{420B5E94-9B71-41B8-8E2A-B1790CB8444D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>App_Laundry.My.MyApplication</StartupObject>
+    <RootNamespace>App_Laundry</RootNamespace>
+    <AssemblyName>App_Laundry</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>App_Laundry.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>App_Laundry.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="anggota.Designer.vb">
+      <DependentUpon>anggota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="anggota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\rptanggota.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptanggota.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\rptkembali.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptkembali.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\rptkonsumen.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptkonsumen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\rptlaporan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptlaporan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bin\Debug\rptpemasukan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptpemasukan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\rptserah.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptserah.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cucian.Designer.vb">
+      <DependentUpon>cucian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cucian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flaporan.Designer.vb">
+      <DependentUpon>Flaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flogin.Designer.vb">
+      <DependentUpon>Flogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gantipassword.Designer.vb">
+      <DependentUpon>gantipassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gantipassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jabatan.Designer.vb">
+      <DependentUpon>jabatan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jabatan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Konsumen.Designer.vb">
+      <DependentUpon>Konsumen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Konsumen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuUtama.Designer.vb">
+      <DependentUpon>MenuUtama.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUtama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pegawai.Designer.vb">
+      <DependentUpon>Pegawai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pegawai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pengembalian_cucian.Designer.vb">
+      <DependentUpon>pengembalian_cucian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pengembalian_cucian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="penyerahan_cucian.Designer.vb">
+      <DependentUpon>penyerahan_cucian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="penyerahan_cucian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user.Designer.vb">
+      <DependentUpon>user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="anggota.resx">
+      <DependentUpon>anggota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\rptanggota.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptanggota.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\rptkembali.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptkembali.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\rptkonsumen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptkonsumen.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\rptlaporan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptlaporan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\rptpemasukan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptpemasukan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\rptserah.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptserah.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cucian.resx">
+      <DependentUpon>cucian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flaporan.resx">
+      <DependentUpon>Flaporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flogin.resx">
+      <DependentUpon>Flogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gantipassword.resx">
+      <DependentUpon>gantipassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jabatan.resx">
+      <DependentUpon>jabatan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Konsumen.resx">
+      <DependentUpon>Konsumen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUtama.resx">
+      <DependentUpon>MenuUtama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pegawai.resx">
+      <DependentUpon>Pegawai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pengembalian_cucian.resx">
+      <DependentUpon>pengembalian_cucian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="penyerahan_cucian.resx">
+      <DependentUpon>penyerahan_cucian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user.resx">
+      <DependentUpon>user.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\App_Laundry.exe.config" />
+    <None Include="bin\Debug\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="bin\Debug\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close15px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\konsumen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anggota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pegawai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lap.Pegawai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pengembalian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lap data master.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peminjaman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lap peminjaman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lap denda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laundry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pengembalian_cucian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cucian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitmap1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anggota2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ubah kata sandi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data master.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaksi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laporan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lainnya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tentang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close15px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize15px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize15px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\App_Laundry.exe" />
+    <Content Include="bin\Debug\App_Laundry.pdb" />
+    <Content Include="bin\Debug\App_Laundry.xml" />
+    <Content Include="bin\Debug\System.ValueTuple.dll" />
+    <Content Include="bin\Debug\System.ValueTuple.xml" />
+    <None Include="Resources\Proyek Baru %287%29.png" />
+    <None Include="Resources\Proyek Baru %286%291.png" />
+    <None Include="Resources\Proyek Baru %286%29.png" />
+    <None Include="Resources\Proyek Baru %285%29.png" />
+    <None Include="Resources\Proyek Baru %284%29.png" />
+    <None Include="Resources\Proyek Baru %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
